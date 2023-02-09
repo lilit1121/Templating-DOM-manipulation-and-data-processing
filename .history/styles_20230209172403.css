@@ -1,0 +1,23 @@
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+#error {
+  display: none;
+  justify-content: center;
+  color: red;
+}
+.card-body{
+  overflow: hidden;
+text
+}
+.wr_img {
+  height: 200px;
+}
+.wr_img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}

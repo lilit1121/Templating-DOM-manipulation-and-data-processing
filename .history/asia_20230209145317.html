@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- https://restcountries.com/ -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>Templating, DOM manipulation and data processing</title>
+  </head>
+  <body>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">RSS feeds</h1>
+          <p class="lead text-muted">Click to load feed</p>
+          <div class="btn-group">
+            <a href="./europe" class="btn btn-outline-secondary">Europe</a>
+            <a href="./asia" class="btn btn-primary">Asia</a>
+            <a href="./americas" class="btn btn-outline-secondary">America</a>
+            <a href="./africa" class="btn btn-outline-secondary">Africa</a>
+            <a href="./oceania" class="btn btn-outline-secondary">Oceania</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Loading state UI -->
+      <div class="alert alert-secondary visually-hidden">Loading...</div>
+
+      <!-- Error state UI -->
+      <div class="alert alert-danger visually-hidden">
+        <h5>Unable to load feed</h5>
+        <!-- Show error message, if applicable -->
+        Feed could not be converted, probably not a valid RSS feed.<br />
+        <small><a href="#">Open feed in a new tab</a></small>
+      </div>
+
+      <!-- Feed (Show no more than 5 posts per page) -->
+      <div
+        id="main_container"
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+      ></div>
+    </div>
+
+    <!-- Pagination -->
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
